@@ -4,17 +4,17 @@ A Python application that demonstrates a fundamental pattern in LLM application 
 
 This application serves as an educational template and building block, designed to help developers understand:
 
-How to work with Large Language Models (LLMs) through APIs in a production-like environment
-How to implement "LLM teaming" patterns where multiple models work together
-Basic patterns for prompt engineering and response chaining
-Clean architecture principles in AI application development
+- How to work with Large Language Models (LLMs) through APIs in a production-like environment
+- How to implement "LLM teaming" patterns where multiple models work together
+- Basic patterns for prompt engineering and response chaining
+- Clean architecture principles in AI application development
 
 While simple in scope, this codebase reflects patterns that can be expanded into more sophisticated applications, such as:
 
-Multi-stage content generation and verification systems
-AI-powered content moderation platforms
-Complex decision-making pipelines with multiple specialist models
-Self-reviewing AI systems
+- Multi-stage content generation and verification systems
+- AI-powered content moderation platforms
+- Complex decision-making pipelines with multiple specialist models
+- Self-reviewing AI systems
 
 ## Features
 
