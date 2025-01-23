@@ -120,7 +120,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Acknowledgments
 
-- Built with Python and the OpenAI Python client library.
+- Built with Python and the OpenAI Python client library
 
 ## Disclaimer
 
