@@ -16,7 +16,7 @@ While simple in scope, this codebase reflects patterns that can be expanded into
 - Complex decision-making pipelines with multiple specialist models
 - Self-reviewing AI systems
 
-## Features
+## 🚀 Features
 
 - Two-stage LLM processing pipeline
 - Configurable LLM models for both stages
@@ -30,7 +30,7 @@ While simple in scope, this codebase reflects patterns that can be expanded into
 - Python 3.8+
 - OpenAI API key
 
-## Installation
+## 📜 Installation
 
 1. Clone the repository:
 ```bash
@@ -57,7 +57,7 @@ GPT_MODEL_REVIEW=gpt-4o
      - `system_prompt.txt`: Contains the system prompt for the initial model
      - `user_prompt.txt`: Contains the base user prompt
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 gpt-chain-assistant/
@@ -110,13 +110,33 @@ The application will:
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
+## 📜 License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details. Copyright (C) 2025.
+This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). Copyright (c) 2025 AI for Altruism Inc.
 
-## Authors
+When using or distributing this software, please attribute as follows:
 
-- A4A Team <team@ai4altruism.org>
+```
+LLM Chain Assistant
+Copyright (c) 2025 AI for Altruism Inc
+License: GNU GPL v3.0
+```
+
+## 🎯 Contributing
+
+Pull requests are welcome! To contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📩 Contact
+
+For issues or questions, please open a GitHub issue or contact:
+
+- **Email**: team@ai4altruism.org
 
 ## Acknowledgments
 
