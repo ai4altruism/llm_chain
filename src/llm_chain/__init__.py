@@ -7,7 +7,8 @@ from llm_chain.exceptions import (
     ConfigurationError,
     StreamingError,
 )
-from llm_chain.providers.base import LLMProvider, Message, Role
+from llm_chain.providers.base import LLMProvider, Message, Role, GenerationConfig
+from llm_chain.providers.openai import OpenAIProvider
 
 __version__ = "2.0.0"
 
@@ -23,4 +24,7 @@ __all__ = [
     "LLMProvider",
     "Message",
     "Role",
+    "GenerationConfig",
+    # Providers
+    "OpenAIProvider",
 ]
