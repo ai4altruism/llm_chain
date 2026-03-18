@@ -9,6 +9,7 @@ from llm_chain.exceptions import (
 )
 from llm_chain.providers.base import LLMProvider, Message, Role, GenerationConfig
 from llm_chain.providers.openai import OpenAIProvider
+from llm_chain.providers.claude import ClaudeProvider
 
 __version__ = "2.0.0"
 
@@ -27,4 +28,5 @@ __all__ = [
     "GenerationConfig",
     # Providers
     "OpenAIProvider",
+    "ClaudeProvider",
 ]
