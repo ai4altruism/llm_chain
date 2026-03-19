@@ -4,6 +4,7 @@ from llm_chain.providers.base import LLMProvider, Message, Role, GenerationConfi
 from llm_chain.providers.openai import OpenAIProvider
 from llm_chain.providers.claude import ClaudeProvider
 from llm_chain.providers.gemini import GeminiProvider
+from llm_chain.providers.factory import ProviderFactory
 
 __all__ = [
     "LLMProvider",
@@ -13,4 +14,5 @@ __all__ = [
     "OpenAIProvider",
     "ClaudeProvider",
     "GeminiProvider",
+    "ProviderFactory",
 ]
