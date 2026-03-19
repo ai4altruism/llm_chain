@@ -10,7 +10,8 @@ A modern, async Python library for multi-provider LLM chaining with streaming su
 - **Two-Stage Chaining**: Initial response generation + automated review/critique
 - **Interactive CLI**: REPL interface with provider switching and streaming display
 - **Flexible Configuration**: Environment variables and runtime configuration
-- **Comprehensive Testing**: 212 tests with 80%+ coverage
+- **Retry Utilities**: Exponential backoff with jitter for transient failures
+- **Comprehensive Testing**: 238 tests with 81% coverage
 
 ## Installation
 
@@ -285,6 +286,36 @@ except ProviderError as e:
     print(f"Provider error: {e}")
 ```
 
+## Retry Utilities
+
+Built-in retry support for handling transient failures:
+
+```python
+from llm_chain import RetryConfig, retry_async, with_retry
+
+# Using the retry_async function
+async def make_request():
+    config = RetryConfig(
+        max_retries=3,
+        base_delay=1.0,
+        max_delay=60.0,
+        exponential_base=2.0,
+        jitter=True,
+    )
+    return await retry_async(provider.generate, messages, config=config)
+
+# Using the decorator
+@with_retry(RetryConfig(max_retries=5))
+async def my_api_call():
+    return await provider.generate(messages)
+```
+
+Automatically retries on:
+- `RateLimitError` (respects `retry_after` header)
+- Connection timeouts
+- 502, 503, 504 errors
+- Temporary unavailability
+
 ## Development
 
 ### Setup
@@ -332,6 +363,7 @@ llm_chain/
 │   ├── config.py            # Settings and configuration
 │   ├── exceptions.py        # Custom exception hierarchy
 │   ├── chaining.py          # ChainingService implementation
+│   ├── retry.py             # Retry utilities with backoff
 │   ├── cli.py               # Interactive CLI
 │   └── providers/
 │       ├── __init__.py      # Provider exports
