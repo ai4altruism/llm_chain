@@ -16,6 +16,14 @@ from llm_chain.providers.claude import ClaudeProvider
 from llm_chain.providers.gemini import GeminiProvider
 from llm_chain.providers.factory import ProviderFactory
 from llm_chain.chaining import ChainingService, ChainResult, StreamChunk, ChainConfig
+from llm_chain.retry import (
+    RetryConfig,
+    retry_async,
+    with_retry,
+    is_retryable,
+    get_retry_after,
+    DEFAULT_RETRY_CONFIG,
+)
 
 __version__ = "2.0.0"
 
@@ -46,4 +54,11 @@ __all__ = [
     "ChainResult",
     "StreamChunk",
     "ChainConfig",
+    # Retry
+    "RetryConfig",
+    "retry_async",
+    "with_retry",
+    "is_retryable",
+    "get_retry_after",
+    "DEFAULT_RETRY_CONFIG",
 ]
